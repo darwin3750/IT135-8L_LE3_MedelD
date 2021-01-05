@@ -1,0 +1,18 @@
+.le3-animate-wavetext {
+  overflow: hidden;
+}
+
+.le3-animate-wavetext .letter {
+  display: inline-block;
+  line-height: 1em;
+  overflow: hidden;
+}
+
+.le3-animate-slide{
+  opacity: 0;
+  transform-origin: 0 0;
+}
+
+.le3-animate-fadein{
+  opacity: 0;
+}

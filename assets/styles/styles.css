@@ -1,25 +1,122 @@
+@import "bootstrap.min.css";
+@import "animations.css";
+
 @font-face {
-  font-family: SourceSansPro;
-  src: url(SourceSansPro/SourceSansPro-Regular.ttf);
-}
-@font-face {
-  font-family: SourceSansPro-Bold;
-  src: url(SourceSansPro/SourceSansPro-Bold.ttf);
+  font-family: GothamRounded;
+  src: url("Gotham Rounded Book/Gotham Rounded Book.otf");
 }
 
 @font-face {
   font-family: InterRegular;
   src: url(Inter/Inter-Regular-slnt=0.ttf);
 }
+
 @font-face {
   font-family: InterSemiBold;
   src: url(Inter/Inter-SemiBold-slnt=0.ttf);
 }
+
 @font-face {
   font-family: InterBold;
   src: url(Inter/Inter-Bold-slnt=0.ttf);
 }
+
 @font-face {
   font-family: InterBlack;
   src: url(Inter/Inter-Black-slnt=0.ttf);
+}
+
+.theme1 {
+  --le3-base: #F1FAEE;
+  --le3-main: #E63946;
+
+  /* --le3-main-pos1: #62A474;
+  --le3-main-pos2: #528961;
+  --le3-main-pos3: #416D4D;
+  --le3-main-pos4: #235D3A;
+  --le3-main-pos5: #203626;
+  --le3-main-pos6: #101B13;
+
+  --le3-main-neg1: #87C999;
+  --le3-main-neg2: #9BD2AA;
+  --le3-main-neg3: #AFDBBB;
+  --le3-main-neg4: #C8EAD1;
+  --le3-main-neg5: #D7EDDD;
+  --le3-main-neg6: #EBF6EE; */
+
+  --le3-accent1: #A8DADC;
+  --le3-accent2: #A8DADC;
+
+  --le3-contrast: #1D3557;
+}
+
+.theme2 {
+  --le3-base: #235D3A;
+  --le3-main: #73C088;
+
+  --le3-main-pos1: #62A474;
+  --le3-main-pos2: #528961;
+  --le3-main-pos3: #416D4D;
+  --le3-main-pos4: #235D3A;
+  --le3-main-pos5: #203626;
+  --le3-main-pos6: #101B13;
+
+  --le3-main-neg1: #87C999;
+  --le3-main-neg2: #9BD2AA;
+  --le3-main-neg3: #AFDBBB;
+  --le3-main-neg4: #C8EAD1;
+  --le3-main-neg5: #D7EDDD;
+  --le3-main-neg6: #EBF6EE;
+
+  --le3-accent1: #A673C0;
+  --le3-accent2: #C073AB;
+  --le3-accent3: #C0737C;
+
+  --le3-contrast: #fff;
+}
+
+:root {
+  font-size: 16px;
+  font-family: InterRegular;
+  color: var(--le3-contrast);
+}
+
+body{
+  background-color: var(--le3-base);
+}
+a{
+  color: var(--le3-main);
+}
+
+.le3-title{
+  font-size: 4.6rem;
+  font-family: GothamRounded;
+  color: var(--le3-contrast);
+}
+
+.le3-regular{
+  font-family: InterRegular;
+  color: var(--le3-contrast);
+}
+.le3-semibold{
+  font-family: InterSemiBold;
+  color: var(--le3-contrast);
+}
+.le3-bold{
+  font-family: InterBold;
+  color: var(--le3-contrast);
+}
+.le3-black{
+  font-family: InterBlack;
+  color: var(--le3-contrast);
+}
+.le3-bg-contrast{
+  background-color: var(--le3-contrast);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
