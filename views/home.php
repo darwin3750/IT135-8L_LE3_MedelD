@@ -1,17 +1,19 @@
-<html>
-
-<head>
-  <title>My Food Delivery Store</title>
-</head>
 <?php
 session_start(); //starts the session
-if ($_SESSION['user']) { //checks if user is logged in
-} else {
-  //header("location:index.php"); // redirects if user is not logged in
+if (!$_SESSION['user']) { //checks if user is not logged in
+  header("location:index.php"); // redirects if user is not logged in
 }
 $user = $_SESSION['user']; //assigns user value
 ?>
 
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Food Delivery Store</title>
+  <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/styles/styles.css">
+</head>
 <body>
   <h2>Home Page</h2>
   <p>Hello <?php print "$user" ?>!</p>
