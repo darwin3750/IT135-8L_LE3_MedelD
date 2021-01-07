@@ -1,16 +1,26 @@
-.le3-animate-wavetext {
+.le3-animate-wavetext-letter-container {
+  display: inline-block;
   overflow: hidden;
+  line-height: 0;
 }
-
-.le3-animate-wavetext .letter {
+.le3-animate-wavetext-letter {
   display: inline-block;
   line-height: 1em;
-  overflow: hidden;
 }
-
-.le3-animate-slide{
+.le3-animate-wavetext{
+  transition: 0.6s;
+}
+.le3-animate-slidescale{
   opacity: 0;
   transform-origin: 0 0;
+}
+
+.le3-animate-slidein{
+  transform: translateX(-100%);
+}
+
+.le3-animate-slidedown{
+  transform: translateY(-100%);
 }
 
 .le3-animate-fadein{

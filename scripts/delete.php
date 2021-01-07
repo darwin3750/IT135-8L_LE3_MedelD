@@ -8,5 +8,5 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
   $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_connect_error()); //Connect to server
   $id = $_GET['id'];
   mysqli_query($con, "DELETE FROM list WHERE id='$id'");
-  header("location: home.php");
+  header("location: ../views/home.php");
 }

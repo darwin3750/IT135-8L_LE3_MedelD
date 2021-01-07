@@ -1,4 +1,5 @@
 @import "bootstrap.min.css";
+@import "bootstrap-extensions.css";
 @import "animations.css";
 
 @font-face {
@@ -28,7 +29,7 @@
 
 .theme1 {
   --le3-base: #F1FAEE;
-  --le3-main: #E63946;
+  --le3-main: #a1e1e4;
 
   /* --le3-main-pos1: #62A474;
   --le3-main-pos2: #528961;
@@ -44,8 +45,13 @@
   --le3-main-neg5: #D7EDDD;
   --le3-main-neg6: #EBF6EE; */
 
-  --le3-accent1: #A8DADC;
-  --le3-accent2: #A8DADC;
+  --le3-accent1: #E63946;
+  --le3-accent1-dark: #ce313e;
+  --le3-accent1-light: #ff4050;
+
+  --le3-accent2: #66cace;
+  --le3-accent2-dark: #5db8bb;
+  --le3-accent2-light: #73e0e4;
 
   --le3-contrast: #1D3557;
 }
@@ -79,44 +85,126 @@
   font-size: 16px;
   font-family: InterRegular;
   color: var(--le3-contrast);
+  --fp:50%;
 }
 
-body{
-  background-color: var(--le3-base);
-}
-a{
-  color: var(--le3-main);
-}
+/* elements */
+  body{
+    background-color: var(--le3-base);
+  }
+  a{
+    color: var(--le3-accent1);
+  }
 
-.le3-title{
-  font-size: 4.6rem;
-  font-family: GothamRounded;
-  color: var(--le3-contrast);
-}
+/* typography */
+  .le3-title{
+    font-size: 4.6rem;
+    font-family: GothamRounded;
+    color: var(--le3-contrast);
+  }
+  .le3-regular{
+    font-family: InterRegular;
+    color: var(--le3-contrast);
+  }
+  .le3-semibold{
+    font-family: InterSemiBold;
+    color: var(--le3-contrast);
+  }
+  .le3-bold{
+    font-family: InterBold;
+    color: var(--le3-contrast);
+  }
+  .le3-black{
+    font-family: InterBlack;
+    color: var(--le3-contrast);
+  }
 
-.le3-regular{
-  font-family: InterRegular;
-  color: var(--le3-contrast);
-}
-.le3-semibold{
-  font-family: InterSemiBold;
-  color: var(--le3-contrast);
-}
-.le3-bold{
-  font-family: InterBold;
-  color: var(--le3-contrast);
-}
-.le3-black{
-  font-family: InterBlack;
-  color: var(--le3-contrast);
-}
-.le3-bg-contrast{
-  background-color: var(--le3-contrast);
-}
+/* text colors */
+  .le3-color-base{
+    color: var(--le3-base);
+  }
+  .le3-color-main{
+    color: var(--le3-main);
+  }
+  .le3-color-accent1{
+    color: var(--le3-accent1);
+  }
+  .le3-color-accent2{
+    color: var(--le3-accent2);
+  }
+  .le3-color-contrast{
+    color: var(--le3-contrast);
+  }
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+/* backgrounds */
+  .le3-bg-base{
+    background-color: var(--le3-base);
+  }
+  .le3-bg-main{
+    background-color: var(--le3-main);
+  }
+  .le3-bg-accent1{
+    background-color: var(--le3-accent1);
+  }
+  .le3-bg-accent2{
+    background-color: var(--le3-accent2);
+  }
+  .le3-bg-contrast{
+    background-color: var(--le3-contrast);
+  }
+
+/* button fills */
+  .le3-btn-primary {
+    color: var(--le3-base);
+    background-color: var(--le3-accent1);
+    border-color: var(--le3-accent1-dark);
+  }
+
+  .le3-btn-primary:hover {
+    filter: brightness(90%);
+  }
+
+  .le3-btn-primary.disabled, .le3-btn-primary:disabled {
+    filter: brightness(70%);
+  }
+
+  .le3-btn-secondary {
+    color: var(--le3-contrast);
+    background-color: var(--le3-accent2);
+    border-color: var(--le3-accent2-dark);
+  }
+
+  .le3-btn-primary:hover {
+    filter: brightness(90%);
+  }
+
+  .le3-btn-primary.disabled, .le3-btn-primary:disabled {
+    filter: brightness(70%);
+  }
+
+/* button outlines */
+  .le3-btn-outline-primary {
+    color: var(--le3-accent1);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--le3-accent1);
+  }
+
+  .le3-btn-outline-primary:hover {
+    color: var(--le3-base);
+    background-color: var(--le3-accent1);
+    border-color: var(--le3-accent1-dark);
+  }
+  .le3-btn-outline-primary.disabled, .le3-btn-outline-primary:disabled {
+    filter: brightness(70%);
+  }
+
+/* others */
+  .le3-hill{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  

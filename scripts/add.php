@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['user']) {
 } else {
-  header("location:index.php");
+  header("location: ../index.php");
 }
 if ($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
 {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
   }
   mysqli_query($con, "INSERT INTO list (details, date_posted, time_posted, public) VALUES
 ('$details','$date','$time','$decision')"); //SQL query
-  header("location: home.php");
+  header("location: ../views/home.php");
 } else {
-  header("location:home.php"); //redirects back to home
+  header("location: ../views/home.php"); //redirects back to home
 }
