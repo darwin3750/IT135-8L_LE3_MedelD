@@ -61,6 +61,7 @@ $user = $_SESSION['user']; //assigns user value
           ?>
         </tbody>
     </table>
+    <p class="text-center">IT135-8L_LE3_MedelD</p>
   </section>
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   <section id="bottombar" class="fixed-bottom">

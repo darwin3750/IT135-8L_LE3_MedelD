@@ -65,6 +65,7 @@
               <input type="submit" value="Register" class="btn le3-btn-primary btn-lg btn-block mb-2 le3-animate-slidein" />
               <a class="le3-animate-slidein d-block" href="login.php">Have an Account? Login here!</a>
             </form>
+            <p class="text-center">IT135-8L_LE3_MedelD</p>
           </section>
         </section>
       </div>
