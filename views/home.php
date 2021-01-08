@@ -13,7 +13,7 @@ $user = $_SESSION['user']; //assigns user value
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Food Delivery Store</title>
   <link rel="stylesheet" href="../assets/styles/styles.css">
-  <script src="../javascript/anime.min.js"></script>
+  <script src="../anime.min.js"></script>
 </head>
 
 <body class="theme1">
@@ -92,9 +92,6 @@ $user = $_SESSION['user']; //assigns user value
 <style>
   #bottombar {
     transform: translateY(100%);
-  }
-  .le3-animate-slidefadein{
-    opacity: 0;
   }
 </style>
 
