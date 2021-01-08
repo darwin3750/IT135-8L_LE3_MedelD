@@ -44,10 +44,10 @@
 <body class="h-100 theme1">
   <div class="d-sm-flex align-items-center justify-content-center h-100">
     <section class="overflow-hidden container p-0">
-      <div class="le3-bg-accent1 rounded p-3 position-relative" style="z-index: 999;">
+      <div class="le3-bg-contrast rounded-top p-3 le3-border-contrast-2 position-relative" style="z-index: 999;">
         <h2 class="le3-semibold text-center le3-color-base">Registration Page</h2>
       </div>
-      <div class="card rounded h-sm-auto h-100 p-0 le3-animate-slidedown">
+      <div class="card rounded-top-0 le3-border-contrast-2 h-sm-auto h-100 p-0 le3-animate-slidedown">
         <section class="row p-4">
           <section class="col-md-5 d-flex align-items-center justify-content-center p-5">
             <img src="../assets/join.svg" height="auto" width="300px" />

@@ -20,13 +20,13 @@ $user = $_SESSION['user']; //assigns user value
   <section id="topbar" class="le3-bg-contrast d-block w-100 fixed-top">
     <section class="container d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
       <h2 class="le3-bold le3-color-base">Home Page</h2>
-      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center le3-color-base">
+      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center le3-color-base w-md-fit-content w-100">
         <p class="m-3">Hello, <?php print "$user" ?>!</p>
-        <a href="../scripts/logout.php" class="btn btn-lg le3-btn-primary">Click here to logout</a>
+        <a href="../scripts/logout.php" class="btn btn-lg le3-btn-primary w-md-fit-content w-100">Click here to logout</a>
       </div>
     </section>
   </section>
-  <section id="main" class="container">
+  <section id="main" class="container le3-animate-slidefadein">
     <div class="d-flex justify-content-between pt-3">
       <h2 class="le3-semibold">My list</h2>
       <button onclick="revealAdd()" class="btn le3-btn-outline-primary le3-hill pr-4 pl-4"><b>Add an Entry</b></button>
@@ -43,21 +43,23 @@ $user = $_SESSION['user']; //assigns user value
           <th>Public Post</th>
         </tr>
       </thead>
-      <?php
-      $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_connect_error()); //Connect to server
-      $query = mysqli_query($con, "Select * from list"); // SQL Query
-      while ($row = mysqli_fetch_array($query)) {
-        print "<tr>";
-        print '<td align="center">' . $row['id'] . "</td>";
-        print '<td align="center">' . $row['details'] . "</td>";
-        print '<td align="center">' . $row['date_posted'] . " - " . $row['time_posted'] . "</td>";
-        print '<td align="center">' . $row['date_edited'] . " - " . $row['time_edited'] . "</td>";
-        print '<td align="center"><a href="edit.php?id=' . $row['id'] . '">edit</a> </td>';
-        print '<td align="center"><a href="#" onclick="myFunction(' . $row['id'] . ')">delete</a> </td>';
-        print '<td align="center">' . $row['public'] . "</td>";
-        print "</tr>";
-      }
-      ?>
+        <tbody>
+          <?php
+          $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_connect_error()); //Connect to server
+          $query = mysqli_query($con, "Select * from list"); // SQL Query
+          while ($row = mysqli_fetch_array($query)) {
+            print "<tr>";
+            print '<td align="center">' . $row['id'] . "</td>";
+            print '<td align="center">' . $row['details'] . "</td>";
+            print '<td align="center">' . $row['date_posted'] . " - " . $row['time_posted'] . "</td>";
+            print '<td align="center">' . $row['date_edited'] . " - " . $row['time_edited'] . "</td>";
+            print '<td align="center"><a href="edit.php?id=' . $row['id'] . '">edit</a> </td>';
+            print '<td align="center"><a href="#" onclick="myFunction(' . $row['id'] . ')">delete</a> </td>';
+            print '<td align="center">' . $row['public'] . "</td>";
+            print "</tr>";
+          }
+          ?>
+        </tbody>
     </table>
   </section>
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -70,7 +72,7 @@ $user = $_SESSION['user']; //assigns user value
     <section class="le3-bg-contrast">
       <div class="container p-3">
         <form action="../scripts/add.php" method="POST">
-          <h3 class="le3-semibold le3-color-base">Add more to list:</h3>
+          <h3 class="le3-semibold le3-color-base underline">Add more to list</h3>
           <div class="form-group">
             <label for="details" class="le3-regular le3-color-base">Details:</label>
             <input id="details" type="text" name="details" class="form-control" />
@@ -90,6 +92,9 @@ $user = $_SESSION['user']; //assigns user value
   #bottombar {
     transform: translateY(100%);
   }
+  .le3-animate-slidefadein{
+    opacity: 0;
+  }
 </style>
 
 <script>
@@ -99,6 +104,15 @@ $user = $_SESSION['user']; //assigns user value
   window.onresize = () => {
     document.querySelector("#main").style.marginTop = document.querySelector("#topbar").offsetHeight;
   }
+
+  anime({
+    targets: '.le3-animate-slidefadein',
+    opacity: [0,1],
+    translateY: ['3rem', 0],
+    easing: "easeOutExpo",
+    duration: 3000,
+    offset: 600,
+  })
 
   function revealAdd() {
     anime({
