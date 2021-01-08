@@ -17,10 +17,10 @@ $user = $_SESSION['user']; //assigns user value
 </head>
 
 <body class="theme1">
-  <section id="topbar" class="le3-bg-main d-block w-100 fixed-top">
+  <section id="topbar" class="le3-bg-contrast d-block w-100 fixed-top">
     <section class="container d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
-      <h2 class="le3-bold le3-color-contrast">Home Page</h2>
-      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+      <h2 class="le3-bold le3-color-base">Home Page</h2>
+      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center le3-color-base">
         <p class="m-3">Hello, <?php print "$user" ?>!</p>
         <a href="../scripts/logout.php" class="btn btn-lg le3-btn-primary">Click here to logout</a>
       </div>
@@ -31,8 +31,8 @@ $user = $_SESSION['user']; //assigns user value
       <h2 class="le3-semibold">My list</h2>
       <button onclick="revealAdd()" class="btn le3-btn-outline-primary le3-hill pr-4 pl-4"><b>Add an Entry</b></button>
     </div>
-    <table class="table table-bordered">
-      <thead>
+    <table class="table table-hover le3-table">
+      <thead class="le3-table-head text-center">
         <tr>
           <th>Id</th>
           <th>Details</th>
@@ -60,26 +60,26 @@ $user = $_SESSION['user']; //assigns user value
       ?>
     </table>
   </section>
-  <br /><br /><br />
-  <br /><br /><br />
-  <br /><br /><br />
-  <br /><br /><br />
-  <br /><br /><br />
-  <br /><br /><br />
-  <br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   <section id="bottombar" class="fixed-bottom">
     <section class="w-100 d-flex justify-content-end">
       <button onclick="hideAdd()" class="btn le3-hill le3-btn-primary pr-5 pl-5 mr-1">
         <img src="../assets/chevron-down.svg" width="25" height="25" />
       </button>
     </section>
-    <section class="le3-bg-main">
+    <section class="le3-bg-contrast">
       <div class="container p-3">
         <form action="../scripts/add.php" method="POST">
-          Add more to list: <br />
-          Details: <input type="text" name="details" /><br />
-          Public Post? <input type="checkbox" name="public[]" value="yes" /><br />
-          <input type="submit" value="Add to list" />
+          <h3 class="le3-semibold le3-color-base">Add more to list:</h3>
+          <div class="form-group">
+            <label for="details" class="le3-regular le3-color-base">Details:</label>
+            <input id="details" type="text" name="details" class="form-control" />
+          </div>
+          <div class="form-check mb-2">
+            <input id="public_checkbox" type="checkbox" name="public[]" value="yes" class="form-check-input" />
+            <label for="public_checkbox" class="le3-regular le3-color-base form-check-label">Public Post?</label>
+          </div>
+          <input type="submit" value="Add to list" class="btn btn-block le3-btn-primary btn-lg" />
         </form>
       </div>
     </section>

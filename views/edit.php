@@ -17,10 +17,10 @@ $id_exists = false;
 </head>
 
 <body class="theme1">
-  <section id="topbar" class="le3-bg-main d-block w-100 fixed-top">
+  <section id="topbar" class="le3-bg-main d-block w-100 fixed-top le3-bg-contrast">
     <section class="container d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
-      <h2 class="le3-bold le3-color-contrast">Home Page</h2>
-      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center">
+      <h2 class="le3-bold le3-color-base">Home Page</h2>
+      <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center le3-color-base">
         <p class="m-3 text-nowrap">Hello, <?php print "$user" ?>!</p>
         <a href="../scripts/logout.php" class="btn w-md-auto  d-block btn-lg le3-btn-primary mr-sm-3">Click here to logout</a>
         <a href="home.php" class="btn w-md-auto w-100 d-block btn-lg le3-btn-primary mt-2 mt-sm-0">Return to Home page</a>
@@ -29,15 +29,17 @@ $id_exists = false;
   </section>
 
   <section id="main" class="container">
-    <h2 align="center">Currently Selected</h2>
-    <table border="1px" width="100%">
-      <tr>
-        <th>Id</th>
-        <th>Details</th>
-        <th>Post Time</th>
-        <th>Edit Time</th>
-        <th>Public Post</th>
-      </tr>
+    <h2 class="le3-semibold">Currently Selected</h2>
+    <table class="table table-hover">
+      <thead class="le3-table-head text-center">
+        <tr>
+          <th>Id</th>
+          <th>Details</th>
+          <th>Post Time</th>
+          <th>Edit Time</th>
+          <th>Public Post</th>
+        </tr>
+      </thead>
       <?php
       if (!empty($_GET['id'])) {
         $id = $_GET['id'];
@@ -64,17 +66,30 @@ $id_exists = false;
         }
       }
       if ($id_exists) {
-        print '<form action="edit.php" method="POST">
-            Update List: <br/>
-            Details: <input type="text" name="details" value="' . $details . '"/><br/>';
+        print '<form action="edit.php" method="POST" class="p-4 le3-border-contrast-2 rounded shadow">
+            <h3 class="le3-semibold">Update List:</h3>
+            <div class="form-group">
+              <label for="details" class="le3-regular">Details:</label>
+              <input id="details" type="text" name="details" class="form-control" value="' . $details . '" />
+            </div>';
         if ($public == "yes") {
-          print 'Public Post? <input type="checkbox" name="public[]" checked/><br/>';
+          print '
+          <div class="form-check mb-2">
+            <input id="public_checkbox" type="checkbox" name="public[]" class="form-check-input" checked/>
+            <label for="public_checkbox" class="le3-regular form-check-label">Public Post?</label>
+          </div>';
         } else {
-          print 'Public Post? <input type="checkbox" name="public[]"/><br/>';
+          print '
+          <div class="form-check mb-2">
+            <input id="public_checkbox" type="checkbox" name="public[]" class="form-check-input"/>
+            <label for="public_checkbox" class="le3-regular form-check-label">Public Post?</label>
+          </div>';
         }
-        print '<input type="submit" value="Update List"/></form>';
+        print '
+          <input type="submit" value="Update List" class="btn btn-block le3-btn-primary btn-lg" />
+        </form>';
       } else {
-        print '<h2 align="center">There is no data to be edited.</h2>';
+        print '<h2 class="text-center text-danger">There is no data to be edited.</h2>';
       }
       ?>
   </section>
