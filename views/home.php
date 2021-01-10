@@ -96,6 +96,9 @@ $user = $_SESSION['user']; //assigns user value
 <style>
   #bottombar {
     transform: translateY(100%);
+  }td{
+    word-wrap: break-word;
+    max-width: 160px;
   }
 </style>
 

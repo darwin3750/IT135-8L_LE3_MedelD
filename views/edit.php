@@ -90,13 +90,20 @@ $id_exists = false;
         print '
           <input type="submit" value="Update List" class="btn btn-block le3-btn-primary btn-lg" />
         </form>';
-      } else {//error message in case the user gets here by accident
+      } else { //error message in case the user gets here by accident
         print '<h2 class="text-center text-danger">There is no data to be edited.</h2>';
       }
       ?>
       <p class="text-center">IT135-8L_LE3_MedelD</p>
   </section>
 </body>
+
+<style>
+  td {
+    word-wrap: break-word;
+    max-width: 160px;
+  }
+</style>
 
 <script>
   window.onload = () => {
