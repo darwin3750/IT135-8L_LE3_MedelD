@@ -13,10 +13,12 @@ $id_exists = false;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Food Delivery Store</title>
+  <!-- link CSS -->
   <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
 <body class="theme1">
+  <!-- top part containing utilities for quick access -->
   <section id="topbar" class="le3-bg-main d-block w-100 fixed-top le3-bg-contrast">
     <section class="container d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
       <h2 class="le3-bold le3-color-base">Home Page</h2>
@@ -88,7 +90,7 @@ $id_exists = false;
         print '
           <input type="submit" value="Update List" class="btn btn-block le3-btn-primary btn-lg" />
         </form>';
-      } else {
+      } else {//error message in case the user gets here by accident
         print '<h2 class="text-center text-danger">There is no data to be edited.</h2>';
       }
       ?>

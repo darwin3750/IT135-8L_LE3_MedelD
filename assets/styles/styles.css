@@ -1,3 +1,4 @@
+/* link all the other needed CSS files */
 @import "bootstrap.min.css";
 @import "bootstrap-extensions.css";
 @import "animations.css";
@@ -26,6 +27,8 @@
   font-family: InterBlack;
   src: url(Inter/Inter-Black-slnt=0.ttf);
 }
+
+/* STYLES FOR IT145-8--LE3 */
 
 .theme1 {
   --le3-base: #F1FAEE;

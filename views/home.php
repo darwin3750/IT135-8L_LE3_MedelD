@@ -12,11 +12,13 @@ $user = $_SESSION['user']; //assigns user value
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Food Delivery Store</title>
+  <!-- link CSS and animation API library -->
   <link rel="stylesheet" href="../assets/styles/styles.css">
   <script src="../anime.min.js"></script>
 </head>
 
 <body class="theme1">
+  <!-- top part containing utilities for quick access -->
   <section id="topbar" class="le3-bg-contrast d-block w-100 fixed-top">
     <section class="container d-flex flex-column flex-md-row justify-content-between align-items-center p-3">
       <h2 class="le3-bold le3-color-base">Home Page</h2>
@@ -25,6 +27,7 @@ $user = $_SESSION['user']; //assigns user value
         <a href="../scripts/logout.php" class="btn btn-lg le3-btn-primary w-md-fit-content w-100">Click here to logout</a>
       </div>
     </section>
+    <!-- the main content--the table. -->
   </section>
   <section id="main" class="container le3-animate-slidefadein">
     <div class="d-flex justify-content-between pt-3">
@@ -64,6 +67,7 @@ $user = $_SESSION['user']; //assigns user value
     <p class="text-center">IT135-8L_LE3_MedelD</p>
   </section>
   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <!-- this part is for adding a new entry. It is hidden at first but reveals itself later when the "Add an entry" button is pressed on -->
   <section id="bottombar" class="fixed-bottom">
     <section class="w-100 d-flex justify-content-end">
       <button onclick="hideAdd()" class="btn le3-hill le3-btn-primary pr-5 pl-5 mr-1">

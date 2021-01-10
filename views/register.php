@@ -37,11 +37,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Food Delivery Store</title>
+  <!-- link CSS and animation API library -->
   <link rel="stylesheet" href="../assets/styles/styles.css">
   <script src="../anime.min.js"></script>
 </head>
 
 <body class="h-100 theme1">
+  <!-- register form in a card -->
   <div class="d-sm-flex align-items-center justify-content-center h-100">
     <section class="overflow-hidden container p-0">
       <div class="le3-bg-contrast rounded-top p-3 le3-border-contrast-2 position-relative" style="z-index: 999;">
@@ -73,6 +75,7 @@
   </div>
 </body>
 
+<!-- animate content on load -->
 <script defer>
   anime.timeline({
     loop: false

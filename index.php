@@ -12,8 +12,9 @@ if(isset($_SESSION['user'])) { //checks if user is logged in
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Food Delivery Store</title>
+  <!-- link CSS and animation API library -->
   <link rel="stylesheet" href="assets/styles/styles.css">
-  <script src="javascript/anime.min.js"></script>
+  <script src="anime.min.js"></script>
 </head>
 <body class="h-100 theme1">
   <section class="text-center d-flex flex-column justify-content-between align-items-center h-100">
