@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
   $date = strftime("%B %d, %Y"); //date
   $decision = "no";
   $con = mysqli_connect("localhost", "root", "", "deliverydb") or die(mysqli_connect_error()); //Connect to server
-  foreach ($_POST['c'] as $each_check) //gets the data from the checkbox
+  foreach ($_POST['public'] as $each_check) //gets the data from the checkbox
   {
     if ($each_check != null) { //checks if the checkbox is checked
       $decision = "yes"; //sets the value
