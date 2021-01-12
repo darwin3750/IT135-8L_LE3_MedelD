@@ -7,6 +7,7 @@ if ($_SESSION['user']) {
 if ($_SERVER['REQUEST_METHOD'] = "POST") //Added an if to keep the page secured
 {
   $details = ($_POST['details']);
+  date_default_timezone_set('Asia/Manila');
   $time = strftime("%X"); //time
   $date = strftime("%B %d, %Y"); //date
   $decision = "no";

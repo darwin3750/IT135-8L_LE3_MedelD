@@ -121,6 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $details = ($_POST['details']);
   $public = "no";
   $id = $_SESSION['id'];
+  date_default_timezone_set('Asia/Manila');
   $time = strftime("%X"); //time
   $date = strftime("%B %d, %Y"); //date
   foreach ($_POST['public'] as $list) {
