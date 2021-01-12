@@ -31,10 +31,10 @@ $user = $_SESSION['user']; //assigns user value
   </section>
   <section id="main" class="container le3-animate-slidefadein">
     <div class="d-flex justify-content-between pt-3">
-      <h2 class="le3-semibold">My list</h2>
-      <button onclick="revealAdd()" class="btn le3-btn-outline-primary le3-hill pr-4 pl-4"><b>Add an Entry</b></button>
+      <h2 class="le3-semibold mb-0">My list</h2>
+      <button onclick="revealAdd()" class="btn le3-btn-outline-primary le3-hill pr-4 pl-4 w-md-fit-content w-100"><b>Add an Entry</b></button>
     </div>
-    <table class="table table-hover le3-table">
+    <table class="table table-hover le3-table overflow-scroll">
       <thead class="le3-table-head text-center">
         <tr>
           <th>Id</th>

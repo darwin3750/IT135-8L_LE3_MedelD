@@ -7,6 +7,9 @@
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-scroll {
+  overflow: scroll;
+}
 .opacity-none {
   opacity: 0;
 }
